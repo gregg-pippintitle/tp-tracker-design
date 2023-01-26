@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+    <!-- Material Design v2 -->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <!-- Tracker Styles -->
+    <link href="pt-tracker.css" rel="stylesheet">
+    <meta name="theme-color" content="#E5F5FD">
+
+    <!-- FIX FOR WINDOW SIZING FULL ON IOS -->
+    <script>
+        const appHeight = () => {
+            const doc = document.documentElement
+            doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+        }
+        window.addEventListener('resize', appHeight)
+        appHeight()
+    </script>
+    <style>
+        :root {
+            --app-height: 100vh;
+        }
+
+        html,
+        body {
+            height: var(--app-height) !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="pt-tracker">
+
+        <div class="pt-tracker-header">
+            <div class="brand">
+                <div class="logo"><img src="assets/pt-logo-color-hor.svg" /></div>
+                <div class="title">
+                    <div class="name">Order Tracker</div>
+                    <div class="order">2345BELVEUEANEVUE-2022</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-tracker-body">
+
+            <div class="timeline">
+                <div class="bar">
+
+                </div>
+                <div class="steps">
+                    <div class="step complete">
+                        <div class="step-content">
+                            <div class="label">Order Received</div>
+                            <div class="updated">
+                                <div class="date">04/09/2021</div>
+                                <div class="time">04:58 pm EST</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step complete">
+                        <div class="step-content">
+                            <div class="label">Searching</div>
+                            <div class="updated">
+                                <div class="date">04/09/2021</div>
+                                <div class="time">04:58 pm EST</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step complete">
+                        <div class="step-content">
+                            <div class="label">Preparing Title Report</div>
+                            <div class="updated">
+                                <div class="date">04/09/2021</div>
+                                <div class="time">04:58 pm EST</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step complete">
+                        <div class="step-content">
+                            <div class="label">Quality Check</div>
+                            <div class="updated">
+                                <div class="date">04/09/2021</div>
+                                <div class="time">04:58 pm EST</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step active">
+                        <div class="step-content">
+                            <div class="label">Delivered</div>
+                            <div class="updated">
+                                <div class="date">04/09/2021</div>
+                                <div class="time">04:58 pm EST</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-scroll">
+                    <div class="order">
+
+                        <div class="product">
+                            Current Owner Search
+                        </div>
+                        <div class="address">
+                            <div class="address-line1">
+                                449 Canal Ave
+                            </div>
+                            <div class="address-line2">
+                                Somerville, MA 02145
+                            </div>
+                        </div>
+
+                        <div class="label">
+                            Estimated Delivery
+                            <div class="sub">
+                                (Updated 04/09/21 - 4:58 EST)
+                            </div>
+
+                        </div>
+                        <div class="eta">
+                            Delivered
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="label">
+                            Status
+                            <div class="sub">
+                                (Updated 04/09/21 - 4:58 EST)
+                            </div>
+                        </div>
+                        <div class="status">
+                            Your Pippin Report&#8482; is complete and delivered! We hope to be able to assist your with your all future title needs!
+                        </div>
+                        <div class="label">
+                            Note
+                            <div class="sub">
+                                (Updated 04/09/21 - 4:58 EST)
+                            </div>
+                        </div>
+                        <div class="note accent">
+                            The report includes a title commitment availbale for download.
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <div class="actions-content">
+                            <button type="button" class="btn primary">View Order Now</button>
+                            <button type="button" class="btn default">Contact Sales Team</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-tracker-footer">
+            <div class="content">
+                <div class="contact">
+                    For additional details, or for any questions, please <a href="#">log In to the Pippin Portal</a> or <a href="#">register for a free account</a>!
+                </div>
+                <div class="copyright">
+                    © 2022 Pippin Title. All rights reserved. <a href="#">www.pippintitle.com</a>
+                </div>
+            </div>
+            <div class="chat">
+                <img src="assets/hubspot-chat.png" />
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -263,13 +263,32 @@ body {
 							.label {
 								font-weight: bold;
 								color: var(--pt-color-red);
+								z-index: 2;
+								position: relative;
 							}
 							.updated {
 								display: block;
+								position: relative;
+								z-index: 1;
 							}
 
 							&:before {
 								background-color: var(--pt-color-red);
+								z-index: 1;
+							}
+						}
+
+						&:last-child {
+							.step-content {
+								&:after {
+									position: absolute;
+									content: " ";
+									left: -33px;
+									bottom: 0px;
+									height: 20px;
+									width: 20px;
+									background-color: #fff;
+								}
 							}
 						}
 					}
@@ -327,7 +346,6 @@ body {
 						font-weight: normal;
 						color: var(--pt-color-red);
 					}
-
 					.eta {
 						font-weight: bold;
 						color: var(--pt-color-black);
