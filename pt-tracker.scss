@@ -205,9 +205,23 @@ body {
 					&:last-child {
 						align-items: flex-end;
 						flex-grow: 0.5;
+
+						.step-content {
+							position: relative;
+							&:after {
+								position: absolute;
+								content: " ";
+								left: -33px;
+								bottom: 0px;
+								height: 100%;
+								width: 20px;
+								background-color: #fff;
+							}
+						}
 					}
 
 					.step-content {
+						z-index: 1;
 						.label {
 							line-height: 1.1em;
 							color: var(--pt-color-silver);
@@ -230,6 +244,7 @@ body {
 						}
 
 						&:before {
+							z-index: 2;
 							content: " ";
 							display: block;
 							position: absolute;
@@ -258,6 +273,31 @@ body {
 						}
 					}
 
+					&.cancelled {
+						.step-content {
+							.label {
+								color: var(--pt-color-red);
+								font-weight: bold;
+							}
+							.updated {
+								display: block;
+							}
+
+							&:before {
+								content: "X";
+								font-size: 30px;
+								font-weight: 1000;
+								color: var(--pt-color-red);
+								background-color: var(--pt-color-white);
+								padding-top: 4px;
+								padding-bottom: 8px;
+								line-height: 1em;
+								margin-top: -10px;
+								left: -34px;
+							}
+						}
+					}
+
 					&.active {
 						.step-content {
 							.label {
@@ -274,21 +314,6 @@ body {
 
 							&:before {
 								background-color: var(--pt-color-red);
-								z-index: 1;
-							}
-						}
-
-						&:last-child {
-							.step-content {
-								&:after {
-									position: absolute;
-									content: " ";
-									left: -33px;
-									bottom: 0px;
-									height: 20px;
-									width: 20px;
-									background-color: #fff;
-								}
 							}
 						}
 					}
@@ -421,21 +446,21 @@ body {
 // Phone
 @media (max-width: 360px), (max-height: 600px) {
 	.pt-tracker {
-		// font-size: 14px;
 		zoom: 0.85;
+		line-height: 1.2em;
 	}
 }
 
 @media (min-width: 1000px) {
 	.pt-tracker {
-		// font-size: 14px;
 		zoom: 1.25;
+		line-height: 1.2em;
 	}
 }
 
 @media (min-width: 1500px) {
 	.pt-tracker {
-		// font-size: 14px;
 		zoom: 1.5;
+		line-height: 1.2em;
 	}
 }
