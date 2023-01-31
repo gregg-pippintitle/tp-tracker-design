@@ -127,6 +127,7 @@ body {
 		gap: 5px;
 		flex-direction: row;
 		align-items: center;
+		min-height: 60px;
 
 		color: var(--pt-color-white);
 		background-color: var(--pt-color-black);
@@ -136,6 +137,7 @@ body {
 			flex-grow: 1;
 			font-size: 10.5px;
 			line-height: 1.15em;
+			margin-right: 85px;
 
 			a {
 				color: var(--pt-color-red);
@@ -150,15 +152,6 @@ body {
 					color: var(--pt-color-blue);
 					text-decoration: none;
 				}
-			}
-		}
-
-		.chat {
-			margin-bottom: -3px;
-			line-height: 1em;
-			img {
-				height: 50px;
-				width: 50px;
 			}
 		}
 	}
@@ -443,11 +436,46 @@ body {
 	}
 }
 
+// Hubspot Chatbot- Keep This
+#hubspot-messages-iframe-container {
+	display: initial !important;
+	z-index: 2147483647;
+	position: fixed !important;
+	bottom: -13px !important;
+	right: -8px !important;
+	border: none;
+}
+
+// Hubspot Chatbot- Temp/Delete This (simulates iFrame and inserted content)
+#hubspot-messages-iframe-container {
+	height: 100px;
+	width: 96px;
+	.psuedoIframe {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		.iDwfLy {
+			box-shadow: rgb(0 0 0 / 10%) 0px 1px 6px, rgb(0 0 0 / 20%) 0px 2px 24px;
+			border: none;
+			transition: box-shadow 150ms ease-in-out 0s;
+			position: relative;
+			border-radius: 50%;
+			height: 60px;
+			width: 60px;
+		}
+	}
+}
+
 // Phone
 @media (max-width: 360px), (max-height: 600px) {
 	.pt-tracker {
 		zoom: 0.85;
 		line-height: 1.2em;
+		.pt-tracker-footer {
+			min-height: 70px;
+		}
 	}
 }
 
@@ -455,6 +483,9 @@ body {
 	.pt-tracker {
 		zoom: 1.25;
 		line-height: 1.2em;
+		.pt-tracker-footer {
+			min-height: 47px;
+		}
 	}
 }
 
@@ -462,5 +493,8 @@ body {
 	.pt-tracker {
 		zoom: 1.5;
 		line-height: 1.2em;
+		.pt-tracker-footer {
+			min-height: 37px;
+		}
 	}
 }
