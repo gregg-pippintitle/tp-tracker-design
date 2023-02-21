@@ -438,33 +438,9 @@ body {
 
 // Hubspot Chatbot- Keep This
 #hubspot-messages-iframe-container {
-	display: initial !important;
-	z-index: 2147483647;
-	position: fixed !important;
-	bottom: -13px !important;
-	right: -8px !important;
-	border: none;
-}
-
-// Hubspot Chatbot- Temp/Delete This (simulates iFrame and inserted content)
-#hubspot-messages-iframe-container {
-	height: 100px;
-	width: 96px;
-	.psuedoIframe {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 100%;
-		width: 100%;
-		.iDwfLy {
-			box-shadow: rgb(0 0 0 / 10%) 0px 1px 6px, rgb(0 0 0 / 20%) 0px 2px 24px;
-			border: none;
-			transition: box-shadow 150ms ease-in-out 0s;
-			position: relative;
-			border-radius: 50%;
-			height: 60px;
-			width: 60px;
-		}
+	iframe {
+		bottom: -10px !important;
+		right: -2px !important;
 	}
 }
 
@@ -475,6 +451,12 @@ body {
 		line-height: 1.2em;
 		.pt-tracker-footer {
 			min-height: 70px;
+		}
+	}
+	#hubspot-messages-iframe-container {
+		iframe {
+			bottom: -13px !important;
+			right: -8px !important;
 		}
 	}
 }
